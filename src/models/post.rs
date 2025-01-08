@@ -2,6 +2,7 @@ use chrono::NaiveDateTime;
 use diesel::{AsChangeset, Insertable, Queryable};
 use serde::{Deserialize, Serialize};
 use uuid::Uuid;
+use crate::schema::posts;
 
 #[derive(Queryable, Insertable, Serialize, Deserialize, AsChangeset)]
 #[diesel(table_name = posts)]

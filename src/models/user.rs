@@ -2,8 +2,9 @@ use chrono::NaiveDateTime;
 use diesel::{AsChangeset, Insertable, Queryable};
 use serde::{Deserialize, Serialize};
 use uuid::Uuid;
+use crate::schema::users;
 
-#[derive(Queryable, Insertable, Serialize, Deserialize, AsChangeset)]
+#[derive(Debug, Queryable, Insertable, Serialize, Deserialize, AsChangeset)]
 #[diesel(table_name = users)]
 pub struct User {
     pub id: Uuid,
